@@ -8,7 +8,7 @@
     font-family: 'Times New Roman', Times, serif;
 }
 header {
-    background: rgb(132, 194, 255);
+    background: #57b5eb;
     width: 100%;
     height: 50px;
     display: flex;

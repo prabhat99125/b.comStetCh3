@@ -4,11 +4,12 @@ let send = document.querySelector(".table");
 let getData = document.querySelector("#getData")
 let xValue = document.querySelectorAll(".X");
 let showChart = document.querySelector(".showChrt");
+let ad = document.querySelector(".ad");
 
 // creat input data table
 btn.addEventListener(("click"), () => {
     let btnValue = namunaNo.value;
-    let html = `<table class="">`;
+    let html = `<table class="block ">`;
     html +=`<tr><thead><th>નિદર્શ</th>`;
     for ( a=1; a<=btnValue; a++) {
         html += `<th>${a}</th>`;
@@ -23,13 +24,14 @@ btn.addEventListener(("click"), () => {
         html += `<td><input type="number" class="R"></input></td>`;
     }  
     
-    html += `</tr><tbody>`;
-    html += `<table class=""><tr><td>n<input type="number" class="nad"></td> <td>A<sub>2</sub><input type="number" class="nad"></td> <td>D<sub>3</sub><input type="number" value="0" class="nad"></td> <td>D<sub>4</sub><input type="number" class="nad"></td>  </tr></table>`;
+    let htmlad = `</tr><tbody>`;
+    htmlad += `<table class="block"><tr><td><input type="hidden" class="nad"></td> <td>A<sub>2</sub><input type="number" class="nad"></td> <td>D<sub>3</sub><input type="number" value="0" class="nad"></td> <td>D<sub>4</sub><input type="number" class="nad"></td>  </tr></table>`;
     let nad = document.getElementsByClassName("nad");
     send.innerHTML = html;  
+    ad.innerHTML = htmlad;
     namunaNo.style.display = "none";
     btn.style.display = "none";
-    getData.style.display = "";
+    getData.style.display = "block";
 });
 //array total value sum function
 function arraySum(arr) {
@@ -72,7 +74,7 @@ getData.addEventListener("click",() => {
     xArraySum.push(arraySum(xArray));
     rArraySum.push(arraySum(rArray));
     let arrData = document.querySelector("#arrData");
-    let arrayHtml = `<table class=""><thead><tr> <th>નિદર્શ ક્રમ</th><th>X̅</th><th>R</th> </tr></thead> <tbody>`;
+    let arrayHtml = `<table class="block"><thead><tr> <th>નિદર્શ ક્રમ</th><th>X̅</th><th>R</th> </tr></thead> <tbody>`;
     for ( a=0; a<xArray.length; a++ ) {
         arrayHtml += `<tr> <td>${no[a]}</td><td>${xArray[a]}</td><td>${rArray[a]}</td></tr>`;
     }
@@ -85,7 +87,7 @@ getData.addEventListener("click",() => {
     let xrDiv = document.createElement("div");
     let _X_ = xArraySum / no.length;
     let _R_ = rArraySum / no.length;
-    let methData = `<table class=""><tr><td><math xmlns='http://www.w3.org/1998/Math/MathML'><mi> &#x00B5;</mi> <mo> = </mo> <mfrac> <mrow> <mo> &#x2211;</mo> <mover> <mrow> <mi> X </mi> </mrow> <mrow> <mo> __ </mo> </mrow> </mover> </mrow> <mrow> <mi> m </mi> </mrow> </mfrac> <mo> = </mo> <mfrac> <mrow> <mn> ${xArraySum} </mn> </mrow> <mrow> <mn> ${no.length} </mn> </mrow> </mfrac> <mo> = </mo> <mn><b> ${_X_} </b></mn> </math> </td></tr>`
+    let methData = `<table class="block"><tr><td><math xmlns='http://www.w3.org/1998/Math/MathML'><mi> &#x00B5;</mi> <mo> = </mo> <mfrac> <mrow> <mo> &#x2211;</mo> <mover> <mrow> <mi> X </mi> </mrow> <mrow> <mo> __ </mo> </mrow> </mover> </mrow> <mrow> <mi> m </mi> </mrow> </mfrac> <mo> = </mo> <mfrac> <mrow> <mn> ${xArraySum} </mn> </mrow> <mrow> <mn> ${no.length} </mn> </mrow> </mfrac> <mo> = </mo> <mn><b> ${_X_} </b></mn> </math> </td></tr>`
     methData += `<tr><td><math xmlns='http://www.w3.org/1998/Math/MathML'> <mover> <mrow> <mi> R </mi> </mrow> <mrow> <mo> __ </mo> </mrow> </mover> <mo> = </mo> <mfrac> <mrow> <mo> &#x2211; </mo> <mi> R </mi> </mrow> <mrow> <mi> M </mi> </mrow> </mfrac> <mo> = </mo> <mfrac> <mrow> <mn> ${rArraySum} </mn> </mrow> <mrow> <mn> ${no.length} </mn> </mrow> </mfrac> <mo> = </mo> <mn> <b> ${_R_} </b> </mn> </math> </td></tr></table>`;
     xrDiv.classList.add("xrDiv");
     xrDiv.innerHTML = methData;
@@ -95,14 +97,14 @@ getData.addEventListener("click",() => {
 
     xcl.classList.add("xcl");
     
-    let xclData = `<p id="chName">X̅ આલેખ નિયંત્રણ સીમાઓ</P> <table class=""><tr><td><b>C.L. = X̅ = ${xArraySum / no.length}</b></td></tr></table>`
-    xclData += `<table class="">
+    let xclData = `<p id="chName">X̅ આલેખ નિયંત્રણ સીમાઓ</P> <table class="block"><tr><td><b>C.L. = X̅ = ${xArraySum / no.length}</b></td></tr></table>`
+    xclData += `<table class="block">
                     <tr><td>U.C.L. = X̅ + A<sub>2</sub>R</td></tr>
                     <tr><td>U.C.L. = ${_X_} + ${a2}(${_R_})</td></tr>
                     <tr><td>U.C.L. = ${_X_}  + ${a2 * _R_}</td></tr>
                     <tr><td><b>U.C.L. = ${_X_ + a2 * _R_}</b></td></tr>
                 </table>`
-    xclData += `<table class="">
+    xclData += `<table class="block">
                 <tr><td>L.C.L. = X̅ - A<sub>2</sub>R</td></tr>
                 <tr><td>L.C.L. = ${_X_} - ${a2}(${_R_})</td></tr>
                 <tr><td>L.C.L. = ${_X_}  - ${a2 * _R_}</td></tr>
@@ -114,13 +116,13 @@ getData.addEventListener("click",() => {
 
     let rcl = document.createElement("div");
     rcl.classList.add("rcl");
-    let rclData = `<p id="chName">R આલેખ નિયંત્રણ સીમાઓ</P> <table class=""><tr><td><b>C.L. = R = ${_R_}</b></td></tr></table>`
+    let rclData = `<p id="chName">R આલેખ નિયંત્રણ સીમાઓ</P> <table class="block"><tr><td><b>C.L. = R = ${_R_}</b></td></tr></table>`
     rclData += `<table >
                     <tr><td>U.C.L. = D<sub>4</sub>R</td></tr>
                     <tr><td>U.C.L. = ${d4} * ${_R_}</td></tr>
                     <tr><td><b>U.C.L. = ${d4 * _R_}</></td></tr>
                 </table>`
-    rclData += `<table class="">
+    rclData += `<table class="block">
                 <tr><td>L.C.L. = D<sub>3</sub>R</td></tr>
                 <tr><td>L.C.L. = ${d3} * ${_R_}</td></tr>
                 <tr><td><b>L.C.L. = ${d3 * _R_}</b></td></tr>
@@ -130,7 +132,7 @@ getData.addEventListener("click",() => {
     
 
     // chrt creat
-    showChart.style.display="";
+    showChart.style.display="block";
 let x = no;
 let y = xArray;
 let y1 = rArray;

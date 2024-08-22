@@ -26,3 +26,8 @@
 .xrChart samp {
     padding-left: 20px;
 }
+
+.nirixit {
+    display: flex;
+    justify-content: center;
+}

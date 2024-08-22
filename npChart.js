@@ -1,6 +1,7 @@
 let btn = document.querySelector("#btn");
 let namunaNo = document.querySelector("#namunaNo");
 let table = document.querySelector("#table");
+let nirixit = document.querySelector(".nirixit");
 let getData = document.querySelector("#getData");
 let namNo = namunaNo.value;
 let cretbtn = document.querySelector("#creatTable");
@@ -23,9 +24,10 @@ btn.addEventListener("click",() => {
         no.push(a);
         HTMLTable += `<td><input  type="number" class="iptChart"></input></td>`;
     }
-    HTMLTable +=`</tr><tbody></table>`;
-    HTMLTable += `<table style="margin-left: 35%;"><tr><td>નિરીક્ષિત વસ્તુ</td><td><input  type="number" class="dicision"></input></td>`
+    nirixithtml =`</tr><tbody></table>`;
+    nirixithtml += `<table><tr><td>નિરીક્ષિત વસ્તુ</td><td><input  type="number" class="dicision"></input></td>`
     table.innerHTML = HTMLTable;
+    nirixit.innerHTML = nirixithtml;
     cretbtn.style.display = "none";
     getData.style.display = "block";
 });

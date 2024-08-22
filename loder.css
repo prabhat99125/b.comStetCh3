@@ -4,3 +4,6 @@
     display: flex;
     justify-content: center;
 }
+.loder-svg img {
+    width: 200px;
+}

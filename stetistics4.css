@@ -53,12 +53,10 @@ table {
     /* font-size: 20px; */
     border-radius: 2px 2px 0 0;
     overflow: hidden;
-    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.249); */
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.249);
 }
 table thead tr {
-    background: rgb(56, 154, 253);
-    /* background-color: #3FA0D7; */
+    background-color: #57b5eb;
     color: #ffffff;
     text-align: center;
 
@@ -187,14 +185,10 @@ main {
     display: flex;
     justify-content: center;
 }
-
-.conWidth {
-    border: 2px solid black;
-    /* width: 70px; */
-    max-width: 70px;
-    /* overflow:inherit; */
-    overflow-x: scroll;
-    scrollbar-width: none;
-    padding: 0px 2px;
-    
+.ad {
+    display: flex;
+    justify-content: center;
+}
+.ad input {
+    margin-left: 7px;
 }
