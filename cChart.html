@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="How To Creat C Chart (Count Chart)">
+    <meta name="keywords" content="C Chart, Statistic, b.com sem5, sggu, gu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navStyle.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="stetistics4.css">
+    <link rel="stylesheet" href="footer.css">
+    <title>C Chart</title>
+    <link rel="icon" type="image/x-icon" href="iconChart.svg">
+</head>
+<body>
+    <header>
+        <div class="logo">B.com Statistics</div>
+        <input type="checkbox" id="nav_check" hidden>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="X&RChart.html">X̅ & R Chart</a>
+                </li>
+                <li>
+                    <a href="npChart.html">np Chart</a>
+                </li>
+                <li>
+                    <a href="cChart.html" class="active">C Chart</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+            <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11454151760"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11454151760');
+</script>
+</head>
+    </header>
+
+    <div class="loder-svg">
+        <img src="p.svg">
+    </div>
+
+    <main>
+        
+       <div class="input">
+        <h2>C Chart</h2>
+       <div id="creatTable">
+        <div class="btn" ><input id="namunaNo" type="number" placeholder="કુલ નિદર્શ"></div>
+        <div class="btn"><button id="btn">Creat Table</button></div>
+       </div>
+        <div id="table" class="scrol"></div>
+        <div class="btn"></p><button id="getData">Submit</button></div>
+        <div id="addtable"></div>
+        
+        <div class="tableData" >
+            <div id="calculet" class="scrol"></div>
+            <div id="npChartControl" class="scrol" ></div>
+        </div>
+       </div>
+       </div>
+       
+       <div class="showChrt scrol" >
+        <div class="custum">
+            <canvas id="chart1"  ></canvas>
+        </div>
+       </div>
+       <div id="ans"></div>
+    </div>
+    </main> 
+
+    <footer>
+        <div class="footer">
+
+        </div>
+    </footer>
+    
+    <script src="cChart.js"></script>
+    <script src="loder.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

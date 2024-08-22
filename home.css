@@ -1,0 +1,28 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+.chepter h2 {
+    text-align: center;
+    margin-top: 10px;
+}
+.chbtn {
+    justify-content: center;
+    display: ruby;
+    text-align: justify;
+  text-justify: inter-word;
+}
+.chbtn button {
+    display: block;
+    font-weight: 700;
+    margin: 10px 0px;
+    padding: 5px 30px;
+    background-color: rgba(216, 254, 255, 0.886);
+    border-radius: 3px;
+    cursor: pointer;
+}
+.xrChart {
+    margin: 10px;
+}
+.xrChart samp {
+    padding-left: 20px;
+}
