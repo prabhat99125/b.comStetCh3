@@ -7,6 +7,6 @@ window.addEventListener("load", function() {
         lod.style.display = "none";  
         main.style.display = "block";
         homefot.style.position = "relative";      
-    },2000);
+    },0);
   
 });
